@@ -25,12 +25,28 @@ while True:
             (255, 0, 0),
             2
         )
+    
+    text = f"Faces Detected: {len(faces)}"
+
+    cv2.putText(
+        frame,
+        text,
+        (20, 40),
+        cv2.FONT_HERSHEY_COMPLEX,
+        1,
+        (0, 255, 0),
+        2
+    )
 
     cv2.imshow("Face Detector", frame)
 
-    if cv2.waitKey(1) == 27:
-            break
+    key = cv2.waitKey(1)
 
-    
+    if key == 27 or key == ord('q'):
+        break
+
+    if key == ord('s'):
+        cv2.imwrite("photo.jpg", frame)
+
 cam.release()
 cv2.destroyAllWindows()
