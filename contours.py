@@ -54,7 +54,7 @@ while True:
     lower_brown = (10, 100, 20)
     upper_brown = (20, 255, 200)
 
-    mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
+    mask = cv2.inRange(hsv, lower_green, upper_green)
     
     contours, hierarchy = cv2.findContours(
         mask,
