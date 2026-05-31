@@ -34,7 +34,7 @@ while True:
         (20, 40),
         cv2.FONT_HERSHEY_COMPLEX,
         1,
-        (0, 255, 0),
+        (255, 0, 0),
         2
     )
 
